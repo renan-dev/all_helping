@@ -1,0 +1,473 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-areas: 'header header header' 'section section section' 'article article article' 'footer footer footer' 'copy copy copy';
+    grid-template-columns: 33.33% 33.33% 33.33%;
+<<<<<<< HEAD
+    grid-template-rows: 100vh auto auto auto 30px;
+    font-family: 'Arya', sans-serif;
+=======
+    grid-template-rows: 100vh 700px 500px 450px 30px;
+    font-family:  sans-serif;
+>>>>>>> 6bcd75a761abd7e3812f12fc9f075be5f1ee3dd1
+}
+
+header {
+    grid-area: header;
+    height: 100vh;
+}
+
+.welcome {
+    flex-direction: column;
+    margin-top: -500px;
+    text-align: center;
+    font-size: 2em;
+    color: #fff;
+    font-family: 'Leckerli One', cursive;
+    position: relative;
+    z-index: 1;
+}
+
+.welcome h1::after {
+    content: "";
+    display: block;
+    width: 150px;
+    border-radius: 10px;
+    height: 5px;
+<<<<<<< HEAD
+    background: #3E95BF;
+=======
+    background: rgb(236, 203, 81);
+>>>>>>> 6bcd75a761abd7e3812f12fc9f075be5f1ee3dd1
+    margin: 40px auto;
+}
+
+.welcome button {
+    border: none;
+    height: 40px;
+    width: 150px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    background-color: #3E95BF;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: .1em;
+    color: #fff;
+}
+
+.welcome button a{
+    text-decoration: none;    
+}
+
+.welcome button:hover {
+<<<<<<< HEAD
+    border: 2px solid #3E95BF;
+=======
+    border: 2px solid ffff00;
+>>>>>>> 6bcd75a761abd7e3812f12fc9f075be5f1ee3dd1
+}
+
+.menu-aux {
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    top: 0;
+    background-color: rgba(255, 255, 255, .9);
+<<<<<<< HEAD
+    border-bottom: 1px solid #3E95BF;
+    transition: 0.5s ease-in;
+=======
+    border-bottom: 1px solid rgb(236, 203, 81);
+>>>>>>> 6bcd75a761abd7e3812f12fc9f075be5f1ee3dd1
+
+}
+
+.menu-aux ul a {
+    color: #000;
+}
+
+.menu-aux ul a:hover {
+<<<<<<< HEAD
+    color: #3E95BF;
+=======
+    color:#ffff00;
+>>>>>>> 6bcd75a761abd7e3812f12fc9f075be5f1ee3dd1
+}
+
+nav {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #3E95BF;
+    padding: 0 50px 0 50px;
+    border-bottom: 1px solid #fff;
+}
+
+nav .logo {
+    width: 50px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 35%;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.2em;
+    letter-spacing: .1em;
+    color: #fff;
+    font-weight: bold;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+nav ul a:hover {
+    color: #000;
+    transition: .5s;
+}
+
+.banner {
+    width: 100%;
+    height: 70vh;
+    background-color: #fff;
+}
+
+.corOpc {
+    width: 100%;
+    height: calc(100vh - 80px);
+    background: #000;
+    opacity: 0.4;
+    position: absolute;
+    z-index: 1;
+}
+
+.banner img {
+    width: 100%;
+    height: calc(100vh - 80px);
+}
+
+section {
+    grid-area: section;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+section.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container .titulo {
+    margin-top: 0px;
+}
+
+section .cols {
+    display: flex;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 2.3em;
+}
+
+.titulo::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 5px;
+    background: #3E95BF;
+    margin: 1px auto;
+    border-radius: 10px;
+}
+
+.subtitulo {
+    color: #000;
+}
+
+.subtitulo::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 5px;
+    background: #fff;
+    margin: 1px auto;
+    border-radius: 10px;    
+}
+
+section p {
+    font-size: 1.2em;
+    letter-spacing: .1em;
+    line-height: 25px;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.cols {
+    background-color: #3E95BF;
+    color: #fff;
+}
+
+.col1,
+.col2,
+.col3 {
+    width: 30%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+article {
+    grid-area: article;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.devs {
+    display: flex;
+    flex-direction: column;
+}
+
+.aut-dev {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    background-color: #dfdfdf;
+}
+
+.devs p {
+    font-weight: bold;
+    letter-spacing: .1em;
+    font-size: 1em;
+}
+
+.devs a:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+}
+
+.dev {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.autor1,
+.autor2,
+.autor3,
+.autor4,
+.autor5 {
+    width: 200px;
+    margin: 20px auto;
+    text-align: center;
+    padding: 30px;
+}
+
+footer {
+    grid-area: footer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.cols-sobre {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    background-color: #3E95BF;
+    color: #fff;    
+
+}
+
+.cols-sobre h3 {
+    color: #fff;
+
+}
+
+.contact-area1,
+.contact-area2 {
+    width: 45%;
+    text-align: center;
+    padding: 10px;
+}
+
+.contact-area1 h3::after,
+.contact-area2 h3::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 5px;
+    background: #fff;
+    margin: 1px auto;
+    border-radius: 10px;    
+}
+.contact-area2 {
+    text-align: center;
+}
+
+.contact-area2 p {
+    text-align: left;
+}
+
+.contact-area1 ul {
+    text-align: left;
+}
+
+.contact-area1 li {
+    list-style: none;
+}
+
+.area-app {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.area-app img{
+    width: 80px;
+    margin-right: 50px;
+}
+
+.area-app button {
+    border: none;
+    height: 40px;
+    width: auto;
+    border-radius: 5px;
+    border: 1px solid #000;
+    background-color: #3E95BF;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: .1em;
+}
+
+.area-app button:hover {
+    border: 1px solid #3E95BF;
+    background-color: #fff;
+    color: #3E95BF;
+}
+
+
+.copy {
+    grid-area: copy;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    color: #3E95BF;
+}
+
+
+@media (max-width: 1050px) {
+    nav, .menu-aux {
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        justify-content: center;
+    }
+    nav ul {
+        width: 80%;
+    }
+    nav img {
+        margin-left: 30px;
+    }
+}
+
+@media (max-width: 750px) {
+    .menu-aux {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+    .menu-aux ul {
+        width: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .menu-aux ul a {
+        color: #3E95BF;
+    }
+    .menu-aux ul a:hover {
+        color: #000;
+    }
+
+    .menu-aux img {
+        margin-top: 20px;
+    }
+
+    .aut-dev {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    } 
+    .cols {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .col1, .col2, .col3 {
+        width: 100%;
+    }
+    .devs {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+    }
+    .autor1,
+    .autor2,
+    .autor3,
+    .autor4,
+    .autor5 { 
+        background-color: #dfdfdf;
+        border-radius: 10px;
+    }
+    .cols-sobre {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    .contact-area1, .contact-area2 {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .contact-area2 {
+        width: 50%;
+    }
+    .contact-area2 button {
+        height: auto;
+    }
+}
