@@ -11,7 +11,7 @@ const menuItems = document.querySelectorAll('ul [href^="#"]');
 
  function scrollToIdOnClick(event) {
      event.preventDefault();
-     const to = getScrollTopByHref(event.target) - 30;
+     const to = getScrollTopByHref(event.target) - 70;
      scrollToPosition(to).css("marginBottom: 1px solid yellow");
  }
 

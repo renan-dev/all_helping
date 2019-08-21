@@ -4,23 +4,19 @@ body {
     display: grid;
     grid-template-areas: 'header header header' 'section section section' 'article article article' 'footer footer footer' 'copy copy copy';
     grid-template-columns: 33.33% 33.33% 33.33%;
-<<<<<<< HEAD
-    grid-template-rows: 100vh auto auto auto 30px;
+    grid-template-rows: 100vh 550px 500px 500px 30px;
     font-family: 'Arya', sans-serif;
-=======
-    grid-template-rows: 100vh 700px 500px 450px 30px;
-    font-family:  sans-serif;
->>>>>>> 6bcd75a761abd7e3812f12fc9f075be5f1ee3dd1
 }
 
 header {
     grid-area: header;
-    height: 100vh;
 }
 
 .welcome {
     flex-direction: column;
     margin-top: -500px;
+    width: 100%;
+    top: 0;
     text-align: center;
     font-size: 2em;
     color: #fff;
@@ -35,12 +31,8 @@ header {
     width: 150px;
     border-radius: 10px;
     height: 5px;
-<<<<<<< HEAD
     background: #3E95BF;
-=======
-    background: rgb(236, 203, 81);
->>>>>>> 6bcd75a761abd7e3812f12fc9f075be5f1ee3dd1
-    margin: 40px auto;
+    margin: 20px auto;
 }
 
 .welcome button {
@@ -61,28 +53,18 @@ header {
 }
 
 .welcome button:hover {
-<<<<<<< HEAD
     border: 2px solid #3E95BF;
-=======
-    border: 2px solid ffff00;
->>>>>>> 6bcd75a761abd7e3812f12fc9f075be5f1ee3dd1
 }
 
 .menu-aux {
     align-items: center;
     justify-content: center;
-    position: fixed;
     width: 100%;
     z-index: 999;
     top: 0;
     background-color: rgba(255, 255, 255, .9);
-<<<<<<< HEAD
     border-bottom: 1px solid #3E95BF;
-    transition: 0.5s ease-in;
-=======
-    border-bottom: 1px solid rgb(236, 203, 81);
->>>>>>> 6bcd75a761abd7e3812f12fc9f075be5f1ee3dd1
-
+    position: fixed;
 }
 
 .menu-aux ul a {
@@ -90,21 +72,20 @@ header {
 }
 
 .menu-aux ul a:hover {
-<<<<<<< HEAD
     color: #3E95BF;
-=======
-    color:#ffff00;
->>>>>>> 6bcd75a761abd7e3812f12fc9f075be5f1ee3dd1
 }
 
 nav {
     height: 80px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: #3E95BF;
     padding: 0 50px 0 50px;
     border-bottom: 1px solid #fff;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
 }
 
 nav .logo {
@@ -115,11 +96,13 @@ nav ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 35%;
+    width: 40%;
 }
 
 nav li {
     list-style: none;
+    margin-right: 15px;
+
 }
 
 nav a {
@@ -148,16 +131,16 @@ nav ul a:hover {
 
 .corOpc {
     width: 100%;
-    height: calc(100vh - 80px);
+    height: 100vh;
     background: #000;
-    opacity: 0.4;
+    opacity: 0.7;
     position: absolute;
     z-index: 1;
 }
 
 .banner img {
     width: 100%;
-    height: calc(100vh - 80px);
+    height: 100vh;
 }
 
 section {
@@ -257,11 +240,6 @@ article {
     font-size: 1em;
 }
 
-.devs a:hover {
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-}
-
 .dev {
     width: 150px;
     border-radius: 50%;
@@ -291,21 +269,33 @@ footer {
     flex-direction: row;
     width: 100%;
     height: auto;
-    background-color: #3E95BF;
     color: #fff;    
-
+    background-color: #3E95BF;
+    margin-top: 10px;
 }
 
 .cols-sobre h3 {
-    color: #fff;
-
+    color: #000;
 }
 
 .contact-area1,
 .contact-area2 {
-    width: 45%;
-    text-align: center;
+    width: 40%;
     padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.contact-area1 li {
+    list-style: none;
+    text-align: center;
+    margin-left: -40px;
+}
+
+.contact-area1 p {
+    text-align: center;
 }
 
 .contact-area1 h3::after,
@@ -318,26 +308,33 @@ footer {
     margin: 1px auto;
     border-radius: 10px;    
 }
+
 .contact-area2 {
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.tuto-app {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .contact-area2 p {
-    text-align: left;
-}
-
-.contact-area1 ul {
-    text-align: left;
-}
-
-.contact-area1 li {
-    list-style: none;
+    text-align: center;
+    width: 300px;
 }
 
 .area-app {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: row;
     padding: 20px;
 }
 
@@ -348,7 +345,7 @@ footer {
 
 .area-app button {
     border: none;
-    height: 40px;
+    height: auto;
     width: auto;
     border-radius: 5px;
     border: 1px solid #000;
@@ -365,7 +362,6 @@ footer {
     color: #3E95BF;
 }
 
-
 .copy {
     grid-area: copy;
     display: flex;
@@ -375,24 +371,14 @@ footer {
     color: #3E95BF;
 }
 
-
-@media (max-width: 1050px) {
-    nav, .menu-aux {
-        padding-top: 20px;
-        display: flex;
-        flex-direction: column;
-        height: auto;
-        justify-content: center;
-    }
-    nav ul {
-        width: 80%;
-    }
-    nav img {
-        margin-left: 30px;
-    }
-}
-
 @media (max-width: 750px) {
+    nav ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 70%;
+        margin-right: 80px;
+    }
     .menu-aux {
         display: flex;
         flex-direction: column;
@@ -402,32 +388,39 @@ footer {
         padding: 0;
     }
     .menu-aux ul {
-        width: 70%;
+        width: 80%;
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
-    
     .menu-aux ul a {
         color: #3E95BF;
     }
     .menu-aux ul a:hover {
         color: #000;
     }
-
     .menu-aux img {
         margin-top: 20px;
     }
-
     .aut-dev {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     position: relative;
     width: 100%;
     background-color: #fff;
     } 
+    .autor1,
+    .autor2,
+    .autor3,
+    .autor4,
+    .autor5 {
+        width: 100px;
+        margin: 20px auto;
+        text-align: center;
+        padding: 0px;
+    }
     .cols {
         display: flex;
         align-items: center;
@@ -442,6 +435,7 @@ footer {
         justify-content: center;
         flex-direction: column;
         position: relative;
+        top: 370px;
     }
     .autor1,
     .autor2,
@@ -450,24 +444,45 @@ footer {
     .autor5 { 
         background-color: #dfdfdf;
         border-radius: 10px;
-    }
-    .cols-sobre {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-    }
-    .contact-area1, .contact-area2 {
-        width: 50%;
+        height: 260px;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
     }
-    .contact-area2 {
-        width: 50%;
+    .autor1 img,
+    .autor2 img,
+    .autor3 img,
+    .autor4 img,
+    .autor5 img {
+        width: 70px;
+        padding: 5px;
+    }
+    .autor1 a img,
+    .autor2 a img,
+    .autor3 a img,
+    .autor4 a img,
+    .autor5 a img {
+        width: 40px;
+    }
+    .cols-sobre {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        position: relative;
+        top: 400px;
     }
     .contact-area2 button {
         height: auto;
+    }
+    footer {
+        position: relative;
+        top: 20%;
+    }
+    .titulo.cont {
+        display: none;
+    }
+    .copy {
+        display: none;
     }
 }
